@@ -1,6 +1,6 @@
 # Петушков А. (marko1olo)
 
-Full-stack developer, game engineer & automation systems builder based in Samara, Russia.
+Full-stack developer, game engineer & automation systems builder.
 
 I build custom business automation pipelines, voice AI integrations, and real-time interactive applications.
 
