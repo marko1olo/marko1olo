@@ -1,32 +1,23 @@
-# Петушков А. (marko1olo)
+# Hi there, I'm D. D. 👋
 
-Full-stack developer, game engineer & automation systems builder.
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=marko1olo&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=marko1olo&layout=compact&theme=tokyonight" alt="Top Languages" />
+</p>
 
-I build custom business automation pipelines, voice AI integrations, and real-time interactive applications.
-
----
-
-## 🛠️ Main Projects
-
-### 🎙️ [PlumbFlow AI](https://github.com/marko1olo/plumbflow-ai)
-Enterprise-ready Voice AI Dispatcher & B2B Lead Generation platform with built-in agency Whitelabel features. Built with Next.js 15, Tailwind v4, Supabase, and Vapi.
-
-### 🕹️ [HECTON-8](https://github.com/marko1olo/Hecton8)
-A deep-sea sci-fi survival & salvage game built in Unity 6000.4 URP. Focuses on high-fidelity visual composition, zero-GC memory optimization, and physics-based underwater navigation.
-
-### 🏥 [Clinic MVP](https://github.com/marko1olo/Clinic_MVP)
-An automation suite for dental clinics, featuring a Fastify/React web platform, an automated Telegram assistant bot, and `ShadowAnalyst` — a local desktop AI engine for automated X-ray analysis.
-
-### 🦷 [StomChat](https://github.com/marko1olo/stomchat)
-A hybrid Telegram userbot and AI manager for dental community archiving, automatic keyframe extraction from video cases, and clinical summarization using Google Gemini.
-
-### ☣️ [GIGAHRUSH](https://github.com/marko1olo/gigahrush)
-A post-apocalyptic WebGL survival game set in the industrial universe of Samosbor.
+### 🛠️ Core Engineering Stack
+- **Game Engine & Native Systems:** C#, Unity 6000 (URP), Burst Compiler, Job System, BatchRendererGroup (BRG), Native Containers
+- **Full-Stack & Backend Web:** TypeScript/JavaScript, Node.js, NestJS, Python (FastAPI/asyncio), PostgreSQL, Docker
+- **AI & Automation:** Custom MCP Servers, local LLM orchestrators, context compression pipelines
 
 ---
 
-## 💻 Tech & Tools
-- **Languages**: TypeScript, C#, Python, SQL
-- **Web**: React, Next.js, Node.js, Fastify, Supabase
-- **Graphics & Engines**: Unity (URP), Godot
-- **Integrations**: Telethon, MQTT, OpenCV, Vapi
+### 📂 Key Projects
+- **[HECTON-8](https://github.com/marko1olo/Hecton8)** - AA Deep Sea Noir / NASA-Punk 3D game featuring custom voxel pipelines and extreme memory optimizations.
+- **[dental-crm](https://github.com/marko1olo/dental-crm)** - Enterprise scheduling & dental CRM integrating custom local DICOM slice rendering.
+- **[headroom](https://github.com/marko1olo/headroom)** - High-efficiency token compression library and RAG context proxy for large language models.
+- **[Clinic_MVP](https://github.com/marko1olo/Clinic_MVP)** - AI-powered X-Ray diagnostics automation suite and patient outreach Telegram bot.
+
+---
+
+*“Zero GC in hot paths, direct memory copy, and facts-only engineering.”*
