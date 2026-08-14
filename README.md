@@ -27,8 +27,13 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=marko1olo&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marko1olo&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8" alt="Top Languages" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Game+Engine+Internals+%C2%B7+C%23+%26+Unity+6000;Zero+GC+Architectures+%C2%B7+Burst+%26+Jobs;Full-Stack+Systems+%C2%B7+TypeScript+%26+PostgreSQL;Autonomous+AI+Swarms+%26+Context+Engines" alt="Typing SVG" />
+
+<br><br>
+
+<img src="https://streak-stats.demolab.com/?user=marko1olo&theme=tokyonight&hide_border=true&background=0d1117" alt="GitHub Streak" />
+
+<br><br>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=marko1olo&theme=tokyo-night&hide_border=true&bg_color=0d1117&area=true" alt="Activity Graph" width="98%" />
 
