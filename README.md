@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/profile-banner.png" alt="Abstract engineering landscape connecting deep-sea systems, data routes, and dental-domain geometry" width="100%" />
 
-  <h1>Marko</h1>
+  <h1>Адольф Петушков (Adolf Petushkov)</h1>
   <p><strong>Game Engine Internals · Full-Stack Systems · Autonomous AI Orchestration</strong></p>
   <p><i>“Zero GC in hot paths, direct memory copy, and facts-only engineering.”</i></p>
 
