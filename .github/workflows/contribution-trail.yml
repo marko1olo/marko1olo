@@ -30,6 +30,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/render-portfolio-pulse.mjs "${{ github.repository_owner }}" dist/portfolio-pulse.svg
 
+      - name: Render studio beacon
+        run: node scripts/render-studio-beacon.mjs Europe/Warsaw dist/studio-beacon.svg
+
       - name: Render profile intelligence
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

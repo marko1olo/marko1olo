@@ -35,6 +35,10 @@
 
 <br><br>
 
+<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/studio-beacon.svg" alt="Studio Beacon with the current Warsaw time-of-day snapshot" width="98%" /></a>
+
+<br><br>
+
 <a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/portfolio-pulse.svg" alt="Portfolio Pulse with current public GitHub portfolio metadata" width="98%" /></a>
 
 <br><br>
