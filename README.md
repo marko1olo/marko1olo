@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/profile-banner.png" alt="Abstract engineering landscape connecting deep-sea systems, data routes, and dental-domain geometry" width="100%" />
+  <img src="./assets/profile-banner-unified.png" alt="Unified engineering landscape of deep-sea systems, voxel terrain, automation signals, and abstract dental geometry" width="100%" />
 
   <h1>Адольф Петушков (Adolf Petushkov)</h1>
   <p><strong>Game Engine Internals · Full-Stack Systems · Autonomous AI Orchestration</strong></p>
@@ -31,6 +31,10 @@
 <br><br>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=marko1olo&theme=tokyo-night&hide_border=true&bg_color=0d1117&area=true" alt="Activity Graph" width="98%" />
+
+<br><br>
+
+<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/portfolio-pulse.svg" alt="Portfolio Pulse with current public GitHub portfolio metadata" width="98%" /></a>
 
 <br><br>
 
@@ -88,7 +92,6 @@
   <sub>Profile README and contribution visual are maintained in <a href="https://github.com/marko1olo/marko1olo">marko1olo/marko1olo</a>.</sub>
 </div>
 
-
 ---
 
 ## 🌐 Connected Ecosystem & Sister Projects
@@ -111,5 +114,5 @@ Part of the **Адольф Петушков (Adolf Petushkov)** open-source engi
 | 🍏 **[Macromac](https://github.com/Jirnyak/macromac)** | Automation | [Live Demo](https://jirnyak.github.io/macromac/) — macOS HID event injection, JSON macro schemas & CoreGraphics |
 
 ### 👨‍💻 Author & Lead Architect
-**Адольф Петушков (Adolf Petushkov)** — Game Engine Internals, Autonomous AI Systems, Zero-GC High-Concurrency Architecture.  
+**Адольф Петушков (Adolf Petushkov)** — Game Engine Internals, Autonomous AI Systems, Zero-GC High-Concurrency Architecture.<br>
 GitHub: [@marko1olo](https://github.com/marko1olo)

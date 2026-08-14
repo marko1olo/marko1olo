@@ -1,4 +1,4 @@
-name: Refresh contribution trail
+name: Refresh profile visuals
 
 on:
   schedule:
@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Check out profile sources
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
       - name: Generate contribution paths
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
         with:
@@ -22,7 +25,12 @@ jobs:
             dist/github-contribution-snake-dark.svg?palette=github-dark&color_snake=%2322d3ee&color_dots=%230b1220,%230e3a52,%23155e75,%230e7490,%2322d3ee
             dist/github-contribution-snake-light.svg?palette=github-light&color_snake=%230891b2&color_dots=%23f8fafc,%23cffafe,%2367e8f9,%2322d3ee,%230891b2
 
-      - name: Publish contribution paths
+      - name: Render portfolio pulse
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/render-portfolio-pulse.mjs "${{ github.repository_owner }}" dist/portfolio-pulse.svg
+
+      - name: Publish profile visuals
         uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865
         with:
           target_branch: output
