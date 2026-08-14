@@ -91,6 +91,16 @@ and patient outreach Telegram bot.
 
 ---
 
+## 🌐 Open Source Engineering & Contributions
+
+* **[python-control/python-control](https://github.com/python-control/python-control)** — Scientific control systems library: Discrete Kalman Filter (DLQE) improvements, LTI integral action refgain fixes, numerical stability.
+* **[terrazzoapp/terrazzo](https://github.com/terrazzoapp/terrazzo)** — Design Token Compiler: CSS syntax comment escaping, parser lint alias comparisons, variable prefix rules.
+* **[nodejs/undici](https://github.com/nodejs/undici)** — Node.js official HTTP client: Body buffer lifecycle during stream decoding, HTTP/2 window settings validation, socket lifecycle.
+* **[django-guardian/django-guardian](https://github.com/django-guardian/django-guardian)** — Django object permissions: Single-column joined queryset subqueries & UUID/BigInt primary key casting.
+* **[miroiu/nodify](https://github.com/miroiu/nodify)** — High-performance node-based editors: Canvas dragging, selection & minimap setting isolation.
+
+---
+
 ## 🛠️ Core Engineering Stack
 
 | Domain | Technologies |
