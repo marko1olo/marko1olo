@@ -1,20 +1,53 @@
-# Adolf Petushkov & Jirnyak Engineering Syndicate
-> High-performance game engine internals, clinical dental AI, deep tech physics simulations, and developer proxy tooling.
+# Adolf Petushkov Engineering Ecosystem — Comprehensive LLM Index
+# https://llmstxt.org/
 
-## Flagship Systems & Live Demonstrations
+> Central architectural index, open-source matrix, and technology registry of Lead Software Architect Adolf Petushkov (marko1olo). Covers 10+ production web applications, game engines, clinical AI pipelines, DSP audio systems, and high-load communication infrastructures.
 
-- [DENTE Dental CRM](https://marko1olo.github.io/dental-crm/): Enterprise clinical workspace prototype featuring an interactive 5-surface FDI odontogram (teeth 11-48), ICD-10 clinical diagnosis engine, periodontal depth sliders, and a 3D DICOM CBCT volumetric slice viewer with Hounsfield windowing.
-- [StomChat Dispatcher](https://marko1olo.github.io/stomchat/): Omni-channel clinical operator workplace integrating WhatsApp Business and Telegram MTProto with 60 FPS real-time SLA telemetry, triage prioritization, and direct DENTE CRM synchronization.
-- [AgentRouter Setup Guide](https://marko1olo.github.io/agentrouter-setup-guide/): Complete integration and proxy configuration guide for Claude Code CLI and VS Code Cline. Features WAF Cyrillic homoglyph byte-substitution (U+0441) and real-time TLS 1.3 latency diagnostics.
-- [Token Audit](https://marko1olo.github.io/token-audit/): Real-time LLM token cost waterfall simulator and cyberpunk CRT terminal. Exact token pricing for Claude Opus 4.8, Sonnet 3.7, GPT-5.6-sol, and DeepSeek-V3 MoE with prompt caching breakdown.
-- [Nexus Media Engine](https://marko1olo.github.io/nexus-media-engine/): High-performance Web Audio API DSP synthesizer and 60 FPS FFT frequency spectrum analyzer with custom oscillator waveforms and dynamic reactive ambilight.
-- [Avito Dental AI Bot](https://marko1olo.github.io/avito-dental-ai-bot/): Zero-hallucination lead intake assistant with a 4-stage deterministic Veto Layer enforcing medical liability rules, price floors, and doctor schedule booking.
-- [Hecton-8 Submersible](https://marko1olo.github.io/Hecton8/): NASA-punk deep sea noir submarine game engine on Unity 6000. Features Hydro-X active sonar, Mackenzie acoustic sound speed calculations, and 0B GC hot paths.
-- [Gigahrush Raycaster](https://marko1olo.github.io/gigahrush/): 2.5D DDA Samosbor raycaster with cellular gas dispersion physics, Soviet dosimeter CRT oscilloscope, and procedural texture synthesis.
-- [Starcluster](https://jirnyak.github.io/starcluster/): 10,000-star gravitational N-body orbital physics simulator utilizing symplectic Velocity-Verlet integration and Keplerian velocity dispersion.
-- [OOMMF Framework](https://jirnyak.github.io/oommf/): Landau-Lifshitz-Gilbert 3D micromagnetic vector lattice visualizer with Heun numerical solver and Skyrmion topological charge calculation.
-- [Macromac Engine](https://jirnyak.github.io/macromac/): Low-level macOS CoreGraphics HID event injection and JSON macro automation engine.
+## Executive Summary
+- Primary Architect: Adolf Petushkov (marko1olo)
+- Ecosystem Focus: High-throughput async architectures, zero-GC hot paths, clinical AI reliability, computational physics, and zero-dependency Vanilla Web interfaces.
+- Portfolio Showcase: https://marko1olo.github.io/marko1olo/
+- GitHub Profile: https://github.com/marko1olo
 
-## Architects & Leadership
-- **Адольф Петушков (Adolf Petushkov)** — Lead Systems Architect (Game Engine Internals, Clinical AI, Zero-GC Concurrency). GitHub: https://github.com/marko1olo
-- **Жирняк (Jirnyak)** — Deep Tech Specialist (N-Body Gravitational Physics, Quantum Dynamics, macOS HID). GitHub: https://github.com/Jirnyak
+## Architectural Matrix & Production Projects
+1. **DENTE Dental CRM** (`https://marko1olo.github.io/dental-crm/`)
+   - Domain: Medical & Clinical Practice Management
+   - Stack: Fastify 5.2, PostgreSQL 18, React 19, TypeScript 5.8, Vanilla CSS
+   - Core Modules: Interactive FDI Odontogram, 3D DICOM Volume Renderer, ICD-10 Diagnosis Engine, Financial Audit Ledger.
+2. **StomChat** (`https://marko1olo.github.io/stomchat/`)
+   - Domain: Omnichannel Clinical Messaging & Telephony
+   - Stack: Telethon, Python 3.11, FastAPI, WebSockets, WhatsApp Business Cloud API
+   - Core Modules: 3-column operator console, 60 FPS real-time SLA telemetry, zero-loss message queuing.
+3. **AgentRouter Setup Guide** (`https://marko1olo.github.io/agentrouter-setup-guide/`)
+   - Domain: AI Infrastructure, LLM Gateways & WAF Homoglyph Security
+   - Stack: TypeScript, TLS 1.3, Local HTTP Proxy, Claude/Cline/Cursor Interceptor
+   - Core Modules: Dynamic homoglyph cipher, model fallback matrix, latency ping benchmarker.
+4. **Token Audit** (`https://marko1olo.github.io/token-audit/`)
+   - Domain: LLM Cost Telemetry & BPE Tokenizer Analytics
+   - Stack: JavaScript ES6+, Web Workers, High-Precision Math, Cyberpunk Terminal UI
+   - Core Modules: Multi-model cost waterfall calculator (Claude Opus, GPT-5, DeepSeek-V3), batch estimation engine.
+5. **Nexus Media Engine** (`https://marko1olo.github.io/nexus-media-engine/`)
+   - Domain: Digital Signal Processing (DSP) & Web Audio Synthesis
+   - Stack: Web Audio API (OscillatorNode, GainNode, AnalyserNode), HTML5 Canvas
+   - Core Modules: Real-time multi-waveform synth (Sawtooth/Sine/Square/Triangle), 60 FPS FFT frequency spectrum analyzer.
+6. **Avito Dental AI Bot** (`https://marko1olo.github.io/avito-dental-ai-bot/`)
+   - Domain: Clinical Lead Generation & Anti-Hallucination Safety
+   - Stack: Python, FastAPI, Async Queue, Pydantic Schema Validator
+   - Core Modules: 4-Stage Veto Pipeline (Intent -> Clinical Guardrails -> Cost Estimation -> CRM Sync).
+7. **Hecton-8** (`https://marko1olo.github.io/Hecton8/`)
+   - Domain: NASA-Punk / Deep Sea Noir 3D Unity Game Engine
+   - Stack: Unity 6000, C#, Burst Compiler, Unity Mathematics, Job System
+   - Core Modules: Hydro-X Sonar propagation, Bathymetric depth selector (8,420m @ 86.8 MPa), zero-GC physics.
+8. **Gigahrush** (`https://marko1olo.github.io/gigahrush/`)
+   - Domain: 2.5D Retro Game Engine & Atmospheric Physics
+   - Stack: C++23 / WebAssembly, HTML5 Canvas, Vanilla JS
+   - Core Modules: 2.5D DDA Raycaster, cellular gas diffusion engine, interactive terminal.
+9. **TGACH & dvachbot** (`https://tgach.top` & `https://marko1olo.github.io/dvachbot/`)
+   - Domain: Hybrid Imageboard & Telegram Broadcaster
+   - Stack: FastAPI, Jinja2 SSR, WebSockets, Python Telethon, @dvach_Chatbot
+   - Core Modules: Bidirectional Telegram sync, Floyd-Steinberg/Atkinson dithering, WebM-to-WebP transcoder.
+
+## Universal UI/UX Capabilities
+- Universal Command Palette (`Ctrl + K` / `Cmd + K`): Instant fuzzy search across all projects.
+- Web Audio Synthesizer Feedback: Interactive tone generation for clicks and hover events.
+- Zero-CLS Responsive Layouts: Fluid design systems adhering strictly to 375px mobile through 4K displays.
