@@ -30,6 +30,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/render-portfolio-pulse.mjs "${{ github.repository_owner }}" dist/portfolio-pulse.svg
 
+      - name: Render profile intelligence
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/render-profile-intelligence.mjs "${{ github.repository_owner }}" dist
+
       - name: Publish profile visuals
         uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865
         with:

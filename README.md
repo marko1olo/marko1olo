@@ -35,6 +35,18 @@
 
 <br><br>
 
+<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/portfolio-pulse.svg" alt="Portfolio Pulse with current public GitHub portfolio metadata" width="98%" /></a>
+
+<br><br>
+
+<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/language-spectrum.svg" alt="Language Spectrum aggregated from Marko's owned public repositories" width="49%" /></a>
+
+<br><br>
+
+<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/recent-shipping.svg" alt="Recent Shipping with the latest public repository commits" width="98%" /></a>
+
+<br><br>
+
   <a href="https://github.com/marko1olo?tab=repositories"><img src="https://img.shields.io/badge/Explore-30%20public%20repositories-0b1220?style=for-the-badge&labelColor=111827&color=22d3ee" alt="Explore Marko's public GitHub repositories" /></a>
   <a href="https://github.com/marko1olo?tab=followers"><img src="https://img.shields.io/github/followers/marko1olo?style=for-the-badge&label=Follow&labelColor=111827&color=8b5cf6" alt="GitHub followers" /></a>
 
