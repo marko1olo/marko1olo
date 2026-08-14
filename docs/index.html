@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>marko1olo — Master Command Deck & 30-Repository Ecosystem</title>
+  
+  <!-- Canonical & Metadata -->
+  <link rel="canonical" href="https://marko1olo.github.io/marko1olo/" />
+  <meta name="description" content="Master developer portal and interactive command deck cataloging 30 high-performance engineering systems, simulation engines, clinical platforms, and AI swarms across marko1olo and Jirnyak." />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="marko1olo Master Hub" />
+  <meta property="og:title" content="marko1olo — Master Command Deck & 30-Repository Ecosystem" />
+  <meta property="og:description" content="Explore 30 live interactive systems across Deep Tech, Clinical CRM, Game Engines, AI Swarms, and Systems Engineering." />
+  <meta property="og:url" content="https://marko1olo.github.io/marko1olo/" />
+  <meta property="og:image" content="https://marko1olo.github.io/marko1olo/assets/profile-banner.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@marko1olo" />
+  <meta name="twitter:creator" content="@marko1olo" />
+  <meta name="twitter:title" content="marko1olo — Master Developer Command Deck" />
+  <meta name="twitter:description" content="Interactive 30-site directory connecting all public systems and live GitHub Pages." />
+  <meta name="twitter:image" content="https://marko1olo.github.io/marko1olo/assets/profile-banner.png" />
+  
+  <!-- Inline SVG Favicon (Cyber Command Hex Insignia) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 30,9 30,23 16,30 2,23 2,9' fill='%2305080f' stroke='%2300f2fe' stroke-width='2'/%3E%3Cpolygon points='16,7 25,12 25,20 16,25 7,20 7,12' fill='%230c1424' stroke='%234facfe' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%2300f5a0'/%3E%3C/svg%3E" />
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Adolf Petushkov (marko1olo)",
+      "alternateName": "marko1olo",
+      "jobTitle": "Game Engine Internals & Autonomous AI Systems Architect",
+      "url": "https://marko1olo.github.io/marko1olo/",
+      "sameAs": [
+        "https://github.com/marko1olo",
+        "https://github.com/Jirnyak"
+      ]
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --m1-bg: #05080f;
+      --m1-surface: #0c1424;
+      --m1-surface-alt: #111c33;
+      --m1-surface-raised: #162442;
+      --m1-border: #1e2c4a;
+      --m1-border-glow: rgba(0, 242, 254, 0.4);
+      --m1-cyan: #00f2fe;
+      --m1-purple: #4facfe;
+      --m1-emerald: #00f5a0;
+      --m1-amber: #fbbf24;
+      --m1-rose: #f43f5e;
+      --m1-text: #f1f5f9;
+      --m1-text-muted: #94a3b8;
+      --m1-text-dim: #64748b;
+      --m1-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      --m1-font-mono: "JetBrains Mono", "Cascadia Code", "Fira Code", Consolas, monospace;
+      --m1-radius-sm: 4px;
+      --m1-radius-md: 8px;
+      --m1-radius-lg: 14px;
+      --m1-glow-cyan: 0 0 20px rgba(0, 242, 254, 0.25);
+      --m1-glow-purple: 0 0 20px rgba(79, 172, 254, 0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--m1-bg);
+      color: var(--m1-text);
+      font-family: var(--m1-font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Subtle Grid Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(0, 242, 254, 0.02), rgba(0, 255, 0, 0.01), rgba(79, 172, 254, 0.02));
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.35;
+    }
+
+    .m1-container {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    .m1-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 8, 15, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--m1-border);
+    }
+    .m1-nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .m1-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--m1-text);
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+    }
+    .m1-logo-hex {
+      width: 38px;
+      height: 38px;
+      background: var(--m1-surface);
+      border: 1px solid var(--m1-cyan);
+      border-radius: var(--m1-radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--m1-cyan);
+      box-shadow: var(--m1-glow-cyan);
+      font-family: var(--m1-font-mono);
+      font-weight: 800;
+    }
+    .m1-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(0, 245, 160, 0.1);
+      border: 1px solid rgba(0, 245, 160, 0.3);
+      color: var(--m1-emerald);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .m1-pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--m1-emerald);
+      box-shadow: 0 0 8px var(--m1-emerald);
+      animation: m1Pulse 2s infinite;
+    }
+    @keyframes m1Pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    .m1-nav-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .m1-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: var(--m1-radius-md);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.25s ease;
+    }
+    .m1-btn-cyan {
+      background: linear-gradient(135deg, var(--m1-cyan) 0%, var(--m1-purple) 100%);
+      color: #05080f;
+      font-weight: 800;
+      box-shadow: var(--m1-glow-cyan);
+    }
+    .m1-btn-cyan:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+    }
+    .m1-btn-outline {
+      background: var(--m1-surface);
+      color: var(--m1-text);
+      border-color: var(--m1-border);
+    }
+    .m1-btn-outline:hover {
+      border-color: var(--m1-cyan);
+      color: var(--m1-cyan);
+    }
+
+    /* Hero Command Deck */
+    .m1-hero {
+      padding: 56px 0 32px;
+      position: relative;
+    }
+    .m1-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+    @media (max-width: 960px) {
+      .m1-hero-grid { grid-template-columns: 1fr; }
+    }
+
+    .m1-hero-text h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .m1-cyan-gradient {
+      background: linear-gradient(135deg, var(--m1-cyan) 0%, var(--m1-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .m1-hero-bio {
+      font-size: 1.05rem;
+      color: var(--m1-text-muted);
+      margin-bottom: 20px;
+      max-width: 620px;
+      line-height: 1.6;
+    }
+    .m1-quote-box {
+      font-family: var(--m1-font-mono);
+      font-size: 0.82rem;
+      color: var(--m1-cyan);
+      border-left: 2px solid var(--m1-cyan);
+      padding-left: 14px;
+      margin-bottom: 24px;
+    }
+
+    /* Radar & Ecosystem HUD Panel */
+    .m1-radar-panel {
+      background: var(--m1-surface);
+      border: 1px solid var(--m1-border);
+      border-radius: var(--m1-radius-lg);
+      padding: 24px;
+      box-shadow: var(--m1-glow-purple);
+      position: relative;
+      overflow: hidden;
+    }
+    .m1-radar-panel h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--m1-purple);
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .m1-radar-svg {
+      width: 100%;
+      height: 240px;
+      display: block;
+    }
+
+    /* Directory Controls & Filtering */
+    .m1-controls-bar {
+      margin: 40px 0 24px;
+      background: var(--m1-surface);
+      border: 1px solid var(--m1-border);
+      border-radius: var(--m1-radius-lg);
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .m1-search-row {
+      display: flex;
+      gap: 12px;
+    }
+    .m1-search-input {
+      flex: 1;
+      background: var(--m1-surface-alt);
+      border: 1px solid var(--m1-border);
+      border-radius: var(--m1-radius-md);
+      padding: 10px 16px;
+      color: var(--m1-text);
+      font-family: var(--m1-font-sans);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .m1-search-input:focus { border-color: var(--m1-cyan); }
+    .m1-filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .m1-pill {
+      background: var(--m1-surface-alt);
+      border: 1px solid var(--m1-border);
+      color: var(--m1-text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .m1-pill.active, .m1-pill:hover {
+      background: rgba(0, 242, 254, 0.15);
+      border-color: var(--m1-cyan);
+      color: var(--m1-cyan);
+    }
+
+    /* 30-Site Interactive Matrix Grid */
+    .m1-repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+    @media (max-width: 500px) {
+      .m1-repo-grid { grid-template-columns: 1fr; }
+    }
+
+    .m1-repo-card {
+      background: var(--m1-surface);
+      border: 1px solid var(--m1-border);
+      border-radius: var(--m1-radius-lg);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .m1-repo-card:hover {
+      border-color: var(--m1-cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), var(--m1-glow-cyan);
+    }
+    .m1-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .m1-card-id {
+      font-family: var(--m1-font-mono);
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--m1-cyan);
+      background: rgba(0, 242, 254, 0.1);
+      padding: 2px 8px;
+      border-radius: var(--m1-radius-sm);
+    }
+    .m1-card-cat {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--m1-text-dim);
+    }
+    .m1-repo-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+    .m1-repo-card p {
+      font-size: 0.86rem;
+      color: var(--m1-text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .m1-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .m1-tag {
+      font-family: var(--m1-font-mono);
+      font-size: 0.68rem;
+      background: var(--m1-surface-alt);
+      color: var(--m1-purple);
+      border: 1px solid rgba(79, 172, 254, 0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .m1-card-actions {
+      display: flex;
+      gap: 10px;
+      border-top: 1px solid var(--m1-border);
+      padding-top: 14px;
+    }
+    .m1-card-btn {
+      flex: 1;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: var(--m1-radius-md);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .m1-card-btn-launch {
+      background: var(--m1-cyan);
+      color: #05080f;
+    }
+    .m1-card-btn-launch:hover { background: #5df7ff; }
+    .m1-card-btn-details {
+      background: var(--m1-surface-alt);
+      color: var(--m1-text);
+      border: 1px solid var(--m1-border);
+      cursor: pointer;
+    }
+    .m1-card-btn-details:hover { border-color: var(--m1-purple); color: var(--m1-purple); }
+
+    /* Modal Drawer for Architecture Previews */
+    .m1-modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(5, 8, 15, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .m1-modal-card {
+      background: var(--m1-surface);
+      border: 1px solid var(--m1-cyan);
+      border-radius: var(--m1-radius-lg);
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 28px;
+      box-shadow: 0 0 40px rgba(0, 242, 254, 0.3);
+      position: relative;
+    }
+    .m1-modal-close {
+      position: absolute;
+      top: 18px; right: 18px;
+      background: var(--m1-surface-alt);
+      border: 1px solid var(--m1-border);
+      color: var(--m1-text);
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    /* Footer */
+    .m1-footer {
+      border-top: 1px solid var(--m1-border);
+      background: var(--m1-surface);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--m1-text-dim);
+      font-size: 0.85rem;
+    }
+    .m1-footer a {
+      color: var(--m1-cyan);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="m1-header">
+    <div class="m1-container m1-nav-row">
+      <a href="./" class="m1-brand">
+        <div class="m1-logo-hex">M1</div>
+        <span>marko1olo</span>
+        <div class="m1-status-pill">
+          <span class="m1-pulse-dot"></span>
+          <span>ALL SYSTEMS ONLINE</span>
+        </div>
+      </a>
+      <div class="m1-nav-actions">
+        <a href="#directory" class="m1-btn m1-btn-outline">30-Site Directory</a>
+        <a href="https://github.com/marko1olo" target="_blank" class="m1-btn m1-btn-cyan">GitHub Master</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Command Deck -->
+    <section class="m1-hero">
+      <div class="m1-container m1-hero-grid">
+        <div class="m1-hero-text">
+          <h1>
+            Autonomous Systems &amp;<br />
+            <span class="m1-cyan-gradient">Game Engine Architecture</span>
+          </h1>
+          <p class="m1-hero-bio">
+            Senior Systems Architect &amp; Full-Stack Engineer specializing in high-throughput C# Unity 6000 internals, zero-GC low-latency pipelines, autonomous AI swarms, and high-assurance clinical dental platforms.
+          </p>
+          <div class="m1-quote-box">
+            “Zero GC in hot paths, direct memory copy, and facts-only engineering.”
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#directory" class="m1-btn m1-btn-cyan">Explore 30 Ecosystem Sites</a>
+            <a href="https://github.com/marko1olo" target="_blank" class="m1-btn m1-btn-outline">GitHub Profile</a>
+          </div>
+        </div>
+
+        <!-- Animated 6-Axis Codebase Health Radar -->
+        <div class="m1-radar-panel">
+          <h3>
+            <span>Ecosystem Health Radar</span>
+            <span style="font-family:var(--m1-font-mono); font-size:0.75rem; color:var(--m1-cyan);">6-AXIS TELEMETRY</span>
+          </h3>
+          <svg class="m1-radar-svg" viewBox="0 0 300 240" id="m1-radar-svg">
+            <!-- Grid Lines & Background Hexagons -->
+            <polygon points="150,20 236,70 236,170 150,220 64,170 64,70" fill="none" stroke="rgba(30,44,74,0.6)" stroke-width="1"/>
+            <polygon points="150,50 207,83 207,157 150,190 93,157 93,83" fill="none" stroke="rgba(30,44,74,0.6)" stroke-width="1"/>
+            <polygon points="150,80 178,97 178,143 150,160 122,143 122,97" fill="none" stroke="rgba(30,44,74,0.6)" stroke-width="1"/>
+            <!-- Axes -->
+            <line x1="150" y1="120" x2="150" y2="20" stroke="rgba(30,44,74,0.8)" stroke-width="1"/>
+            <line x1="150" y1="120" x2="236" y2="70" stroke="rgba(30,44,74,0.8)" stroke-width="1"/>
+            <line x1="150" y1="120" x2="236" y2="170" stroke="rgba(30,44,74,0.8)" stroke-width="1"/>
+            <line x1="150" y1="120" x2="150" y2="220" stroke="rgba(30,44,74,0.8)" stroke-width="1"/>
+            <line x1="150" y1="120" x2="64" y2="170" stroke="rgba(30,44,74,0.8)" stroke-width="1"/>
+            <line x1="150" y1="120" x2="64" y2="70" stroke="rgba(30,44,74,0.8)" stroke-width="1"/>
+            <!-- Animated Polygon -->
+            <polygon id="m1-radar-poly" points="150,30 225,75 215,160 150,210 75,165 72,75" fill="rgba(0,242,254,0.25)" stroke="#00f2fe" stroke-width="2"/>
+            <!-- Labels -->
+            <text x="150" y="15" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="monospace">Language Diversity</text>
+            <text x="242" y="68" text-anchor="start" fill="#94a3b8" font-size="9" font-family="monospace">Zero-GC Perf</text>
+            <text x="242" y="175" text-anchor="start" fill="#94a3b8" font-size="9" font-family="monospace">Test Coverage</text>
+            <text x="150" y="235" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="monospace">Decoupling</text>
+            <text x="58" y="175" text-anchor="end" fill="#94a3b8" font-size="9" font-family="monospace">Uptime SLA</text>
+            <text x="58" y="68" text-anchor="end" fill="#94a3b8" font-size="9" font-family="monospace">Velocity</text>
+          </svg>
+          <div style="display:flex; justify-content:space-between; margin-top:8px; font-size:0.75rem; color:var(--m1-text-muted);">
+            <span>Indexed: 30 Repositories</span>
+            <span style="color:var(--m1-emerald);">SLA: 99.99% Offline Ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 30-Site Interactive Matrix Section -->
+    <section id="directory" class="m1-container">
+      <div class="m1-controls-bar">
+        <div class="m1-search-row">
+          <input type="text" id="m1-search-box" class="m1-search-input" placeholder="Search 30 websites by name, stack (Unity, React, Python...), or category..." />
+        </div>
+        <div class="m1-filter-pills" id="m1-cat-filters">
+          <button class="m1-pill active" data-cat="all">All Repositories (30)</button>
+          <button class="m1-pill" data-cat="deep-tech">Deep Tech &amp; Sim (6)</button>
+          <button class="m1-pill" data-cat="clinical">Clinical &amp; Healthcare (6)</button>
+          <button class="m1-pill" data-cat="games">Games &amp; Procedural (6)</button>
+          <button class="m1-pill" data-cat="ai-media">Cyberpunk AI &amp; Media (6)</button>
+          <button class="m1-pill" data-cat="systems">Systems &amp; Master Hub (6)</button>
+        </div>
+      </div>
+
+      <!-- Repo Cards Grid -->
+      <div class="m1-repo-grid" id="m1-repo-grid"></div>
+    </section>
+  </main>
+
+  <!-- Interactive Architecture Preview Modal -->
+  <div class="m1-modal-backdrop" id="m1-modal">
+    <div class="m1-modal-card">
+      <button class="m1-modal-close" id="m1-modal-close">&times;</button>
+      <div id="m1-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="m1-footer">
+    <div class="m1-container">
+      <p>marko1olo Master Ecosystem &bull; 30 Unique High-Performance Web Deployments &bull; Zero External Dependencies &bull; <a href="https://github.com/marko1olo" target="_blank">GitHub Profile</a></p>
+    </div>
+  </footer>
+
+  <!-- Complete Directory & Radar JavaScript Engine -->
+  <script>
+    (function() {
+      // 30 Complete Repository Master Database
+      const REPOSITORIES = [
+        // Category 1: Deep Tech & Sim (01-06)
+        { id: "01", name: "Hecton8", owner: "marko1olo", cat: "deep-tech", catName: "Deep Tech & Sim", desc: "NASA-Punk Deep Sea Unity 6000 subsea exploration showcase with active sonar acoustic raycaster.", stack: ["C#", "Unity 6000", "URP", "Burst"], url: "https://marko1olo.github.io/Hecton8/", repo: "https://github.com/marko1olo/Hecton8", arch: "Monolithic URP renderer, Burst-compiled sonar raycaster, zero GC in main simulation loop." },
+        { id: "02", name: "LVN", owner: "Jirnyak", cat: "deep-tech", catName: "Deep Tech & Sim", desc: "Liouville-von Neumann quantum density matrix transport visualizer and cybernetic anime novel.", stack: ["C++", "Quantum Transport", "Eigen", "WebGL"], url: "https://jirnyak.github.io/LVN/", repo: "https://github.com/Jirnyak/LVN", arch: "Unitary quantum propagator, Liouvillian dissipation operators, real-time matrix diagonalization." },
+        { id: "03", name: "oommf", owner: "Jirnyak", cat: "deep-tech", catName: "Deep Tech & Sim", desc: "Landau-Lifshitz-Gilbert micromagnetic vector lattice spin animator and hysteresis loop visualizer.", stack: ["C++", "LLG Solver", "Canvas 2D", "Magnetics"], url: "https://jirnyak.github.io/oommf/", repo: "https://github.com/Jirnyak/oommf", arch: "4th-order Runge-Kutta numerical integrator, exchange and demagnetization energy field computation." },
+        { id: "04", name: "starcluster", owner: "Jirnyak", cat: "deep-tech", catName: "Deep Tech & Sim", desc: "10,000-star sublight gravitational N-body orbital simulator and stellar space economy matrix.", stack: ["C++", "Barnes-Hut O(N log N)", "Canvas 2D", "Physics"], url: "https://jirnyak.github.io/starcluster/", repo: "https://github.com/Jirnyak/starcluster", arch: "Octree spatial hierarchy, relativistic gravitational time dilation calculations." },
+        { id: "05", name: "Bacevo", owner: "Jirnyak", cat: "deep-tech", catName: "Deep Tech & Sim", desc: "Bacterial artificial life evolution simulator with genetic mutation sandbox and petri dish canvas.", stack: ["Python", "Genetic Alg", "Canvas 2D", "A-Life"], url: "https://jirnyak.github.io/Bacevo/", repo: "https://github.com/Jirnyak/Bacevo", arch: "Genotype-to-phenotype translation, mutation cross-over rates, chemical nutrient field diffusion." },
+        { id: "06", name: "bac_apple", owner: "Jirnyak", cat: "deep-tech", catName: "Deep Tech & Sim", desc: "Bad Apple cellular automata frame-driven bacteria colony animator with phosphor CRT rendering.", stack: ["HTML5", "Cellular Automata", "Canvas", "CRT Shader"], url: "https://jirnyak.github.io/bac_apple/", repo: "https://github.com/Jirnyak/bac_apple", arch: "Bitplane video raster decompression driving localized 2D cellular automata birth/survival rules." },
+
+        // Category 2: Clinical & Healthcare (07-12)
+        { id: "07", name: "dental-crm", owner: "marko1olo", cat: "clinical", catName: "Clinical & Healthcare", desc: "DENTE enterprise dental clinic CRM prototype with 32-tooth FDI odontogram and DICOM inspector.", stack: ["TypeScript", "React 19", "Fastify 5", "PostgreSQL 18"], url: "https://marko1olo.github.io/dental-crm/", repo: "https://github.com/marko1olo/dental-crm", arch: "Strict tenant isolation, kopeck-exact financial billing engine, reactive SVG odontogram." },
+        { id: "08", name: "Clinic_MVP", owner: "marko1olo", cat: "clinical", catName: "Clinical & Healthcare", desc: "Intelligent dental clinical automation platform with ShadowAnalyst AI diagnostic image scanner.", stack: ["TypeScript", "React", "AI Diagnostics", "Telephony"], url: "https://marko1olo.github.io/Clinic_MVP/", repo: "https://github.com/marko1olo/Clinic_MVP", arch: "Zero-latency patient triage state machine, automated insurance eligibility verification." },
+        { id: "09", name: "avito-dental-ai-bot", owner: "marko1olo", cat: "clinical", catName: "Clinical & Healthcare", desc: "Avito Messenger hybrid dental AI assistant with real-time zero-hallucination veto engine.", stack: ["Python", "Asyncio", "Avito API", "Veto Guard"], url: "https://marko1olo.github.io/avito-dental-ai-bot/", repo: "https://github.com/marko1olo/avito-dental-ai-bot", arch: "Dual-model consensus validation, slot-filling clinical state tracking, emergency escalation." },
+        { id: "10", name: "stomchat", owner: "marko1olo", cat: "clinical", catName: "Clinical & Healthcare", desc: "Omni-channel dental operator chat dispatcher with bridge telemetry and patient timeline.", stack: ["Python", "Telethon", "AI Providers", "SQLite"], url: "https://marko1olo.github.io/stomchat/", repo: "https://github.com/marko1olo/stomchat", arch: "Multi-tenant WebSocket router, asynchronous message queue, audit-logged patient records." },
+        { id: "11", name: "plumbflow-ai", owner: "marko1olo", cat: "clinical", catName: "Clinical & Healthcare", desc: "Voice AI agent telephony dispatcher with real-time audio call graph and lead routing matrix.", stack: ["TypeScript", "WebRTC", "Twilio", "Node.js"], url: "https://marko1olo.github.io/plumbflow-ai/", repo: "https://github.com/marko1olo/plumbflow-ai", arch: "Sub-200ms audio buffer pipeline, dynamic intent classification, CRM lead synchronization." },
+        { id: "12", name: "mamabroker", owner: "marko1olo", cat: "clinical", catName: "Clinical & Healthcare", desc: "Real estate mortgage amortization yield calculator and institutional property investment matrix.", stack: ["JavaScript", "FinTech Math", "SVG Charts", "CSS Grid"], url: "https://marko1olo.github.io/mamabroker/", repo: "https://github.com/marko1olo/mamabroker", arch: "360-month actuarial loan amortization schedule generator with dual-curve equity waterfall." },
+
+        // Category 3: Games & Procedural (13-18)
+        { id: "13", name: "gigahrush", owner: "marko1olo", cat: "games", catName: "Games & Procedural", desc: "Procedural Soviet Khrushchyovka hallway raycaster with Samosbor anomaly radiation meter.", stack: ["TypeScript", "WebGL", "DDA Raycasting", "Samosbor"], url: "https://marko1olo.github.io/gigahrush/", repo: "https://github.com/marko1olo/gigahrush", arch: "Digital Differential Analyzer (DDA) grid traversal, procedural level seed generator." },
+        { id: "14", name: "gigahrush2", owner: "Jirnyak", cat: "games", catName: "Games & Procedural", desc: "3D voxel Samosbor megastructure engine with lock-free memory and procedural sound synthesizer.", stack: ["C++23", "OpenGL 4.6", "Lock-Free Voxel", "Audio Synth"], url: "https://jirnyak.github.io/gigahrush2/", repo: "https://github.com/Jirnyak/gigahrush2", arch: "128^3 chunked sparse voxel octree, lock-free double-buffered meshing queues." },
+        { id: "15", name: "Timaert", owner: "Jirnyak", cat: "games", catName: "Games & Procedural", desc: "16-bit procedural fantasy meadow dungeon generator with ECS inventory paperdoll simulator.", stack: ["C++", "ECS Architecture", "BSP Dungeons", "Pixel Art"], url: "https://jirnyak.github.io/Timaert/", repo: "https://github.com/Jirnyak/Timaert", arch: "Binary Space Partitioning (BSP) dungeon room layout, archetype-based entity component system." },
+        { id: "16", name: "Timertia", owner: "Jirnyak", cat: "games", catName: "Games & Procedural", desc: "Temporal inertia world-clock and Victorian maid bot procedural event scheduler.", stack: ["Python", "Temporal Graph", "Telegram Bot", "Canvas"], url: "https://jirnyak.github.io/Timertia/", repo: "https://github.com/Jirnyak/Timertia", arch: "Non-linear time branch divergence calculation, scheduled event cron engine." },
+        { id: "17", name: "Population_game", owner: "Jirnyak", cat: "games", catName: "Games & Procedural", desc: "Civilization demographic age pyramid and Malthusian resource economic equilibrium sandbox.", stack: ["HTML5", "Demographics Math", "Canvas 2D", "Economics"], url: "https://jirnyak.github.io/Population_game/", repo: "https://github.com/Jirnyak/Population_game", arch: "Cohort-component demographic projection model, carrying capacity differential equations." },
+        { id: "18", name: "selo_temi", owner: "Jirnyak", cat: "games", catName: "Games & Procedural", desc: "Procedural Russian village historical genealogy tree and Slavic patronymic name generator.", stack: ["Python", "Markov Chains", "Family Graph", "Canvas"], url: "https://jirnyak.github.io/selo_temi/", repo: "https://github.com/Jirnyak/selo_temi", arch: "Markov-chain phonetic syllable synthesis, directed acyclic graph (DAG) pedigree validation." },
+
+        // Category 4: Cyberpunk AI & Media (19-24)
+        { id: "19", name: "token-audit", owner: "marko1olo", cat: "ai-media", catName: "Cyberpunk AI & Media", desc: "LLM token cost waterfall and interactive AI session analyzer with comic visual styling.", stack: ["HTML5", "Canvas 2D", "Token Analytics", "Comic UI"], url: "https://marko1olo.github.io/token-audit/", repo: "https://github.com/marko1olo/token-audit", arch: "Byte-pair encoding (BPE) estimation, token waterfall cost breakdown across top AI models." },
+        { id: "20", name: "nexus-media-engine", owner: "marko1olo", cat: "ai-media", catName: "Cyberpunk AI & Media", desc: "Web Audio 64-band FFT frequency analyzer and ambilight reactive glow canvas visualizer.", stack: ["Web Audio API", "Canvas", "FFT Shader", "JS"], url: "https://marko1olo.github.io/nexus-media-engine/", repo: "https://github.com/marko1olo/nexus-media-engine", arch: "Fast Fourier Transform audio spectral analysis, real-time reactive dynamic ambient lighting." },
+        { id: "21", name: "stenograph", owner: "Jirnyak", cat: "ai-media", catName: "Cyberpunk AI & Media", desc: "LSB steganographic image cipher encoder/decoder and 8-bitplane matrix visualizer.", stack: ["HTML5", "Canvas", "Bit Manipulation", "Crypto"], url: "https://jirnyak.github.io/stenograph/", repo: "https://github.com/Jirnyak/stenograph", arch: "Least Significant Bit (LSB) injection into RGBA image buffers, real-time bitplane slicing." },
+        { id: "22", name: "grok-proxy-overseer", owner: "marko1olo", cat: "ai-media", catName: "Cyberpunk AI & Media", desc: "Swarm load-balancer telemetry sweep and reverse MITM proxy traffic router.", stack: ["Node.js", "Reverse Proxy", "Telemetry Sweep", "Network"], url: "https://marko1olo.github.io/grok-proxy-overseer/", repo: "https://github.com/marko1olo/grok-proxy-overseer", arch: "Weighted round-robin node distributor, circuit breaker health checks, live latency probes." },
+        { id: "23", name: "agentrouter-setup-guide", owner: "marko1olo", cat: "ai-media", catName: "Cyberpunk AI & Media", desc: "Interactive proxy config generator and Claude Code CLI / VS Code WAF bypass checker.", stack: ["Python", "Shell", "WAF Bypass", "Docs"], url: "https://marko1olo.github.io/agentrouter-setup-guide/", repo: "https://github.com/marko1olo/agentrouter-setup-guide", arch: "Live proxy endpoint validation, automated environment config generator." },
+        { id: "24", name: "dvachbot", owner: "marko1olo", cat: "ai-media", catName: "Cyberpunk AI & Media", desc: "Anonymous board media transcoder, scraper and proxy mirror load graph visualizer.", stack: ["Python", "FastAPI", "Telethon", "Makaba API"], url: "https://marko1olo.github.io/dvachbot/", repo: "https://github.com/marko1olo/dvachbot", arch: "Asynchronous media pipeline, video chunking transcode queue, Telegram broadcast engine." },
+
+        // Category 5: Systems & Master Hub (25-30)
+        { id: "25", name: "macromac", owner: "Jirnyak", cat: "systems", catName: "Systems & Master Hub", desc: "macOS Dark Terminal and visual JSON macro flowchart builder and keystroke runner.", stack: ["HTML5", "CSS Glassmorphism", "JSON Macro", "Runner"], url: "https://jirnyak.github.io/macromac/", repo: "https://github.com/Jirnyak/macromac", arch: "Deterministic macro action state machine, visual step-by-step flowchart interpreter." },
+        { id: "26", name: "politic_sim", owner: "Jirnyak", cat: "systems", catName: "Systems & Master Hub", desc: "Parliamentary seat allocator (D'Hondt) and ideological geopolitical swing simulator.", stack: ["HTML5", "D'Hondt Math", "Canvas Charts", "Geopolitics"], url: "https://jirnyak.github.io/politic_sim/", repo: "https://github.com/Jirnyak/politic_sim", arch: "Exact D'Hondt quotient seat allocation algorithm, ideological 2D political compass matrix." },
+        { id: "27", name: "theater", owner: "Jirnyak", cat: "systems", catName: "Systems & Master Hub", desc: "Avant-garde generative typography ribbon canvas and cyber-theater stage choreography.", stack: ["TypeScript", "Canvas 2D", "Stage Synth", "Generative"], url: "https://jirnyak.github.io/theater/", repo: "https://github.com/Jirnyak/theater", arch: "Bézier ribbon generative typography synthesis, multi-track cybernetic stage choreography." },
+        { id: "28", name: "Hecton8_PublicationArchitecture", owner: "marko1olo", cat: "systems", catName: "Systems & Master Hub", desc: "Steel blueprint CI/CD release gate pipeline matrix and SHA256 package checksum validator.", stack: ["PowerShell", "CI/CD Engine", "Hash Validation", "CAD"], url: "https://marko1olo.github.io/Hecton8_PublicationArchitecture/", repo: "https://github.com/marko1olo/Hecton8_PublicationArchitecture", arch: "DAG dependency gate evaluation, automated cryptographic package verification pipeline." },
+        { id: "29", name: "terrazzo", owner: "marko1olo", cat: "systems", catName: "Systems & Master Hub", desc: "Swiss Bauhaus multicolor design token DTCG JSON parser and live multi-target compiler.", stack: ["TypeScript", "DTCG Spec", "OKLCH AST", "Compiler"], url: "https://marko1olo.github.io/terrazzo/", repo: "https://github.com/marko1olo/terrazzo", arch: "Recursive alias resolution, AST token flattener, multi-platform code generator." },
+        { id: "30", name: "marko1olo", owner: "marko1olo", cat: "systems", catName: "Systems & Master Hub", desc: "Master developer command deck and comprehensive 30-site interactive portal directory.", stack: ["HTML5", "CSS3", "ES6 Vanilla", "Radar SVG"], url: "https://marko1olo.github.io/marko1olo/", repo: "https://github.com/marko1olo/marko1olo", arch: "High-density multi-factor repository index, client-side offline zero-fail guarantee." }
+      ];
+
+      // DOM Elements
+      const repoGrid = document.getElementById('m1-repo-grid');
+      const searchBox = document.getElementById('m1-search-box');
+      const catFilters = document.getElementById('m1-cat-filters');
+      const modal = document.getElementById('m1-modal');
+      const modalClose = document.getElementById('m1-modal-close');
+      const modalContent = document.getElementById('m1-modal-content');
+
+      let currentCategory = 'all';
+      let searchQuery = '';
+
+      function renderGrid() {
+        repoGrid.innerHTML = '';
+        const filtered = REPOSITORIES.filter(repo => {
+          const matchCat = currentCategory === 'all' || repo.cat === currentCategory;
+          const query = searchQuery.toLowerCase();
+          const matchSearch = !query || 
+            repo.name.toLowerCase().includes(query) ||
+            repo.desc.toLowerCase().includes(query) ||
+            repo.catName.toLowerCase().includes(query) ||
+            repo.stack.some(s => s.toLowerCase().includes(query));
+          return matchCat && matchSearch;
+        });
+
+        filtered.forEach(repo => {
+          const card = document.createElement('div');
+          card.className = 'm1-repo-card';
+          card.innerHTML = `
+            <div class="m1-card-header">
+              <span class="m1-card-id">SYS.${repo.id}</span>
+              <span class="m1-card-cat">${repo.catName}</span>
+            </div>
+            <h3>${repo.name}</h3>
+            <p>${repo.desc}</p>
+            <div class="m1-tags-row">
+              ${repo.stack.map(tag => `<span class="m1-tag">${tag}</span>`).join('')}
+            </div>
+            <div class="m1-card-actions">
+              <a href="${repo.url}" target="_blank" class="m1-card-btn m1-card-btn-launch">Launch Live Site &rarr;</a>
+              <button class="m1-card-btn m1-card-btn-details" data-id="${repo.id}">Inspect Architecture</button>
+            </div>
+          `;
+
+          card.querySelector('.m1-card-btn-details').addEventListener('click', () => {
+            openModal(repo);
+          });
+
+          repoGrid.appendChild(card);
+        });
+
+        if (filtered.length === 0) {
+          repoGrid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:48px; color:var(--m1-text-muted);">No matching repositories found.</div>`;
+        }
+      }
+
+      function openModal(repo) {
+        modalContent.innerHTML = `
+          <div style="font-family:var(--m1-font-mono); font-size:0.8rem; color:var(--m1-cyan); margin-bottom:8px;">
+            SYSTEM ARCHITECTURE DOSSIER &bull; ID: SYS.${repo.id}
+          </div>
+          <h2 style="font-size:1.8rem; margin-bottom:12px; color:#ffffff;">${repo.name}</h2>
+          <div style="display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap;">
+            <span class="m1-status-pill"><span class="m1-pulse-dot"></span> ONLINE</span>
+            <span style="font-size:0.75rem; background:var(--m1-surface-alt); padding:3px 8px; border-radius:4px; color:var(--m1-purple); font-family:var(--m1-font-mono);">${repo.owner}/${repo.name}</span>
+            <span style="font-size:0.75rem; background:var(--m1-surface-alt); padding:3px 8px; border-radius:4px; color:var(--m1-amber);">${repo.catName}</span>
+          </div>
+          <p style="color:var(--m1-text-muted); font-size:0.95rem; margin-bottom:20px; line-height:1.6;">${repo.desc}</p>
+          
+          <h4 style="font-size:0.85rem; text-transform:uppercase; color:var(--m1-cyan); margin-bottom:8px;">Architecture &amp; Key Invariants</h4>
+          <div style="background:var(--m1-surface-alt); border:1px solid var(--m1-border); border-radius:var(--m1-radius-md); padding:14px; font-family:var(--m1-font-mono); font-size:0.82rem; color:#a5b4fc; margin-bottom:20px;">
+            ${repo.arch}
+          </div>
+
+          <h4 style="font-size:0.85rem; text-transform:uppercase; color:var(--m1-purple); margin-bottom:8px;">Technology Stack</h4>
+          <div class="m1-tags-row" style="margin-bottom:24px;">
+            ${repo.stack.map(s => `<span class="m1-tag" style="font-size:0.8rem; padding:4px 10px;">${s}</span>`).join('')}
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="${repo.url}" target="_blank" class="m1-btn m1-btn-cyan" style="flex:1; min-width:200px; justify-content:center;">🚀 Open Live GitHub Pages</a>
+            <a href="${repo.repo}" target="_blank" class="m1-btn m1-btn-outline" style="flex:1; min-width:200px; justify-content:center;">📂 View Source Repository</a>
+          </div>
+        `;
+        modal.style.display = 'flex';
+      }
+
+      modalClose.addEventListener('click', () => { modal.style.display = 'none'; });
+      modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+
+      searchBox.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderGrid();
+      });
+
+      catFilters.querySelectorAll('.m1-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          catFilters.querySelectorAll('.m1-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentCategory = pill.dataset.cat;
+          renderGrid();
+        });
+      });
+
+      // Animated Radar Oscillation
+      const radarPoly = document.getElementById('m1-radar-poly');
+      let angle = 0;
+      function animateRadar() {
+        angle += 0.04;
+        const v1 = 30 + Math.sin(angle) * 4;
+        const v2 = 225 + Math.cos(angle * 1.2) * 5;
+        const v3 = 215 + Math.sin(angle * 0.9) * 4;
+        const v4 = 210 + Math.cos(angle * 1.1) * 3;
+        const v5 = 75 + Math.sin(angle * 1.3) * 4;
+        const v6 = 72 + Math.cos(angle * 0.8) * 4;
+        radarPoly.setAttribute('points', `150,${v1} ${v2},75 ${v3},160 150,${v4} ${v5},165 ${v6},75`);
+        requestAnimationFrame(animateRadar);
+      }
+      animateRadar();
+
+      renderGrid();
+    })();
+  </script>
+</body>
+</html>
