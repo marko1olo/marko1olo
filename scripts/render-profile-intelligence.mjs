@@ -70,6 +70,33 @@ const ownedPublicRepositories = repositories.filter(
   (repository) => !repository.fork && !repository.private,
 );
 
+// Fetch recent push events to external (non-owned) repos
+let externalContributions = [];
+try {
+  const events = await fetchJson(
+    `https://api.github.com/users/${encodeURIComponent(username)}/events/public?per_page=100`,
+  );
+  const ownedNames = new Set(ownedPublicRepositories.map((r) => r.full_name));
+  const seenRepos = new Set();
+  for (const event of events) {
+    if (event.type !== "PushEvent") continue;
+    const repoName = event.repo?.name;
+    if (!repoName || ownedNames.has(repoName) || seenRepos.has(repoName)) continue;
+    seenRepos.add(repoName);
+    const commit = event.payload?.commits?.at(-1);
+    if (!commit) continue;
+    externalContributions.push({
+      name: repoName.split("/")[1] ?? repoName,
+      fullName: repoName,
+      message: commit.message?.split("\n")[0] ?? "",
+      date: event.created_at?.slice(0, 10) ?? "",
+    });
+    if (externalContributions.length >= 5) break;
+  }
+} catch {
+  // Events API may be unavailable; proceed without external contributions
+}
+
 const languagePayloads = await Promise.all(
   ownedPublicRepositories.map(async (repository) => ({
     name: repository.name,
