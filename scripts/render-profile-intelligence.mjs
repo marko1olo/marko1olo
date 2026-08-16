@@ -140,10 +140,18 @@ const latestRepositoryCommits = await Promise.all(
   }),
 );
 
-const recentPublicChanges = latestRepositoryCommits
-  .filter((commit) => commit !== null)
+const recentPublicChanges = [
+  ...latestRepositoryCommits.filter((commit) => commit !== null),
+  ...externalContributions.map((c) => ({
+    name: c.name,
+    fullName: c.fullName,
+    message: c.message,
+    date: c.date,
+    external: true,
+  })),
+]
   .sort((first, second) => new Date(second.date) - new Date(first.date))
-  .slice(0, 4)
+  .slice(0, 8)
   .map((commit) => ({ ...commit, date: compactDate(commit.date) }));
 
 const syncedAt = new Date().toISOString().replace("T", " ").replace(/\.\d{3}Z$/, " UTC");
@@ -167,7 +175,9 @@ const recentRows = recentPublicChanges.length
       .map(
         (change, index) => {
           const y = 133 + index * 38;
-          return `<circle cx="48" cy="${y - 5}" r="4" fill="#22d3ee"/>
+          const dotColor = change.external ? "#a78bfa" : "#22d3ee";
+          const nameColor = change.external ? "#a5b4fc" : "#c4b5fd";
+          return `<circle cx="48" cy="${y - 5}" r="4" fill="${dotColor}"/>
   <text x="64" y="${y}" fill="#c4b5fd" font-size="13" font-weight="700">${escapeXml(change.repository)}</text>
   <text x="180" y="${y}" fill="#f8fafc" font-size="14">${escapeXml(change.message)}</text>
   <text x="1152" y="${y}" fill="#94a3b8" font-size="12" text-anchor="end">${change.date}</text>
@@ -204,7 +214,7 @@ const languageSpectrum = `<?xml version="1.0" encoding="UTF-8"?>
 </svg>`;
 
 const recentShipping = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 310" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-labelledby="title description">
   <title id="title">Recent public shipping for ${escapeXml(username)}</title>
   <desc id="description">Latest commits from author-owned public repositories.</desc>
   <defs>
@@ -220,7 +230,7 @@ const recentShipping = `<?xml version="1.0" encoding="UTF-8"?>
   <g font-family="DejaVu Sans, sans-serif">
     <text x="48" y="54" fill="#a5f3fc" font-size="13" font-weight="700" letter-spacing="2.4">RECENT SHIPPING</text>
     <text x="48" y="83" fill="#f8fafc" font-size="23" font-weight="700">Latest public repository commits</text>
-    <text x="48" y="108" fill="#94a3b8" font-size="12">Latest commit from each author-owned public repository · messages are shown exactly as published · ${syncedAt}</text>
+    <text x="48" y="108" fill="#94a3b8" font-size="12">Recent commits from owned repos and OSS contributions · ${syncedAt}</text>
     ${recentRows}
   </g>
 </svg>`;
