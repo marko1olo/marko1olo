@@ -18,10 +18,7 @@
 
 </div>
 
-> [!TIP]
-> ### 🚀 Claude Code & VS Code with AgentRouter Setup
-> Get access to flagship models like **Claude Opus 4.8** or **GPT-5.5** at up to 60% discount by registering through the [AgentRouter Invite Link](https://agentrouter.org/register?aff=KM29).
-> For the full setup, real-time streaming configuration, and WAF bypass proxy, read the complete [AgentRouter Integration Guide](https://github.com/marko1olo/agentrouter-setup-guide).
+
 
 ---
 
