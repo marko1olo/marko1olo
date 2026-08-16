@@ -40,7 +40,7 @@
 
 <br><br>
 
-<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/language-spectrum.svg" alt="Language Spectrum aggregated from Marko's owned public repositories" width="49%" /></a>
+<a href="https://github.com/marko1olo?tab=repositories"><img src="https://raw.githubusercontent.com/marko1olo/marko1olo/output/language-spectrum.svg" alt="Language Spectrum aggregated from Marko's owned public repositories" width="98%" /></a>
 
 <br><br>
 
