@@ -57,11 +57,11 @@
 
 ## 🌐 Open Source Engineering & Contributions
 
-* **[python-control/python-control](https://github.com/python-control/python-control)** — Scientific control systems library: Discrete Kalman Filter (DLQE) improvements, LTI integral action refgain fixes, numerical stability.
-* **[terrazzoapp/terrazzo](https://github.com/terrazzoapp/terrazzo)** — Design Token Compiler: CSS syntax comment escaping, parser lint alias comparisons, variable prefix rules.
-* **[nodejs/undici](https://github.com/nodejs/undici)** — Node.js official HTTP client: Body buffer lifecycle during stream decoding, HTTP/2 window settings validation, socket lifecycle.
-* **[django-guardian/django-guardian](https://github.com/django-guardian/django-guardian)** — Django object permissions: Single-column joined queryset subqueries & UUID/BigInt primary key casting.
-* **[miroiu/nodify](https://github.com/miroiu/nodify)** — High-performance node-based editors: Canvas dragging, selection & minimap setting isolation.
+* **[python-control/python-control](https://github.com/python-control/python-control)** — Scientific control systems library: 8 open PRs — numerical robustness of `_is_symmetric` (scale-aware rtol), DLQE filter-form gain, LQE covariance symmetry, forced-response transpose, LTI scalar operations, root-locus limits, time-response plotting. ([PRs ↗](https://github.com/python-control/python-control/pulls/marko1olo))
+* **[terrazzoapp/terrazzo](https://github.com/terrazzoapp/terrazzo)** — Design Token Compiler: 5 open PRs — CSS `*/` comment escaping, duplicate-values alias fix, UTF-8 byte source decoding, `variableName()` bare prefix guard, `@property` invalid `var()` emission fix. ([PRs ↗](https://github.com/terrazzoapp/terrazzo/pulls/marko1olo))
+* **[nodejs/undici](https://github.com/nodejs/undici)** — Node.js official HTTP client: 3 open PRs — Cache.add/addAll body lifecycle hang fix, setEncoding() byte retention, HTTP/2 maxConcurrentStreams/windowSize validation. ([PRs ↗](https://github.com/nodejs/undici/pulls/marko1olo))
+* **[django-guardian/django-guardian](https://github.com/django-guardian/django-guardian)** — Django object permissions: 2 open PRs — BaseBackend inheritance, single-column joined queryset subqueries & UUID/BigInt primary key casting. ([PRs ↗](https://github.com/django-guardian/django-guardian/pulls/marko1olo))
+* **[miroiu/nodify](https://github.com/miroiu/nodify)** — High-performance node-based editors for WPF: 5 open PRs — settings bypass fixes in DraggingSimple/Selection/Minimap, ConnectionOffsetMode.Rectangle NaN fix, grid snapping negative coords, bezier control point halving. ([PRs ↗](https://github.com/miroiu/nodify/pulls/marko1olo))
 
 ---
 
